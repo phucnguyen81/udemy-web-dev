@@ -7,25 +7,26 @@
     <title>Register</title>
   </head>
   <body>
-    <form>
-      First Name: <input type="text" /><br />
-      Last Name: <input type="text" /><br />
-      Email: <input type="text" required /><br />
-      Birthday: <input type="date" /> <br />
+    <!-- Use GET, not POST, to show the data in the submitted URL -->
+    <form method="GET">
+      First Name: <input type="text" name="firstname" /><br />
+      Last Name: <input type="text" name="lastname" /><br />  
+      Email: <input type="text" required name="email" /><br />
+      Birthday: <input type="date" name="birthday" /> <br />
       Gender: <br />
-      <input type="radio" name="gender" /> Male<br />
-      <input type="radio" name="gender" /> Female<br />
+      <input type="radio" name="gender" value="male" /> Male<br />
+      <input type="radio" name="gender" value="female" /> Female<br />
       <hr />
       Pets: <br />
-      <input type="checkbox" name="pet" /> Cat<br />
-      <input type="checkbox" name="pet" /> Dog<br />
-      <input type="checkbox" name="pet" /> Other<br />
+      <input type="checkbox" name="pet" value="cat" /> Cat<br />
+      <input type="checkbox" name="pet" value="dog" /> Dog<br />
+      <input type="checkbox" name="pet" value="other" /> Other<br />
       <hr />
       Cars: <br />
-      <select>
-        <option value="1">Volvo</option>
-        <option value="2">Saudi</option>
-        <option value="3">Honda</option>
+      <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saudi">Saudi</option>
+        <option value="honda">Honda</option>
       </select>
       <hr />
       <input type="submit" value="Regsiter!" />
